@@ -112,11 +112,39 @@ Note: When using langchain.document_loaders.UnstructuredFileLoader for unstructu
 Execute [webui.py](webui.py) script to experience **Web interaction** <img src="https://img.shields.io/badge/Version-0.1-brightgreen">
 ```commandline
 python webui.py
+
+```
+Or execute [api.py](api.py) script to deploy web api.
+```shell
+$ python api.py
 ```
 Note: Before executing, check the remaining space in the `$HOME/.cache/huggingface/` folder, at least 15G.
 
-The resulting interface is shown below:
-![webui](img/webui_0419.png)
+Or execute following command to run VUE after api.py executed
+```shell
+$ cd views 
+
+$ pnpm i
+
+$ npm run dev
+```
+
+VUE interface screenshots:
+
+![](img/vue_0521_0.png)
+
+![](img/vue_0521_1.png)
+
+![](img/vue_0521_2.png)
+
+Web UI interface screenshots:
+
+![img.png](img/webui_0521_0.png)
+
+![](img/webui_0510_1.png)
+
+![](img/webui_0510_2.png)
+
 The Web UI supports the following features:
 
 1. Automatically reads the `LLM` and `embedding` model enumerations in `configs/model_config.py`, allowing you to select and reload the model by clicking `重新加载模型`.
